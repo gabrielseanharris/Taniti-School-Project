@@ -92,6 +92,7 @@ nav a {
   color: black;
   text-decoration: none;
   border-right: 1px solid black;
+  white-space: nowrap;
 }
 nav li:first-child a {
   border-left: 1px solid black;
