@@ -15,10 +15,11 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(194, 233, 23, 0.6);
-    padding: 10rem;
+    box-sizing: border-box;
+    padding: clamp(1.5rem, 6vw, 5rem);
     border-radius: 5%;
-    width: 80%;
-    height: 80%;
+    width: min(90%, 75rem);
+    height: auto;
     margin: 20px auto;
 
 }
@@ -33,8 +34,9 @@ main {
     padding: 1rem;
 }
 .aside {
-    width: 10%;
-    height: 100%;
+    box-sizing: border-box;
+    flex: 0 0 22%;
+    min-width: 15rem;
     background-color: rgba(0, 16, 247, 0.5);
     padding: 20px;
     border-radius: 5%;
@@ -71,7 +73,7 @@ nav{
 .home-content h2,
 .home-content p,
 .home-content img {
-    width:70%;
+    width: min(100%, 50rem);
 }
 h1 {
     font-size: 4rem;
@@ -290,6 +292,12 @@ h1 img {
   overflow: hidden;
   gap: 0;
 }
+.hostel, .resort, .hotel, .bnb-type {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 24rem;
+  padding: clamp(1rem, 3vw, 3rem);
+}
 .hostel {
   display: flex;
   flex-direction: column;
@@ -298,7 +306,6 @@ h1 img {
   background-image: url("media/hostel.png");
   background-size: cover;
   background-position: top;
-  padding: 12rem;
 }
 .resort {
   display: flex;
@@ -308,7 +315,6 @@ h1 img {
   background-image: url("media/resort.png");
   background-size: cover;
   background-position: center;
-  padding: 12rem;
 }
 .hotel {
   display: flex;
@@ -318,7 +324,6 @@ h1 img {
   background-image: url("media/hotel.png");
   background-size: cover;
   background-position: top;
-  padding: 12rem;
 }
 .accomodation-links, .beach h2, .rainforest h2, .volcano h2 {
   background-color: rgba(255, 255, 255, 0.8);
@@ -328,7 +333,10 @@ h1 img {
 .intro {
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    max-width: 70rem;
+    padding: 1rem clamp(1rem, 4vw, 2rem) 0;
+    line-height: 1.5;
     font-weight: bold;
 }
 .city, .nature, .rainforest, .beach, .museum {
@@ -336,6 +344,9 @@ h1 img {
   display: block;
   color: white;
   text-decoration: none;
+}
+.collage > a {
+  min-height: 20rem;
 }
 
 .city img, .nature img, .rainforest img, .beach img, .museum img {
@@ -421,7 +432,10 @@ h1 img {
   justify-content: center;
   background-size: cover;
   background-position: top;
-  padding: 12rem;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 22rem;
+  padding: clamp(1rem, 3vw, 3rem);
 }
 .restaurant1 {
   background-image: url("media/restaurant1.jpeg");
@@ -456,7 +470,6 @@ h1 img {
   flex-direction: column;
   align-items: center;
   background-position: top;
-  padding: 12rem;
 }
 .bnb{
   background-image: url("media/bnb.png");
@@ -471,6 +484,7 @@ h1 img {
   text-align: center;
   justify-content: center;
   font-size: larger;
+  padding: clamp(1.5rem, 3vw, 3rem);
 }
 .dining-collage-bottom {
   display: grid;
@@ -516,6 +530,62 @@ h1 img {
 .beach p, .volcano p, .rainforest p {
   background-color: white;
   font-size: large;
+}
+
+@media (max-width: 900px) {
+  .main-aside {
+    gap: 1rem;
+  }
+  .home-content {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+  }
+  .dining-collage-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .collage,
+  .dining-collage-top,
+  .dining-collage-bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hostel, .resort, .hotel, .bnb-type,
+  .restaurant1, .restaurant2, .restaurant3, .restaurant4,
+  .restaurant5, .restaurant6, .restaurant7 {
+    min-height: 18rem;
+    padding: 1rem;
+  }
+  .collage > a {
+    min-height: 18rem;
+  }
+  .city .card-overlay,
+  .city span,
+  .nature span,
+  .museum span {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+  .main-aside {
+    flex-direction: column;
+  }
+  .home-content,
+  .aside {
+    width: 100%;
+    min-width: 0;
+    flex: auto;
+    margin: 0.5rem 0;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+  h1 img {
+    width: clamp(3rem, 12vw, 5rem);
+    height: clamp(3rem, 12vw, 5rem);
+    padding: 0.5rem;
+  }
 }
 .bigger-font {
   font-size: larger;
