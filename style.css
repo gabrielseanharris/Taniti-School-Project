@@ -305,18 +305,18 @@ h1 img {
   padding: clamp(1rem, 3vw, 3rem);
 }
 .hostel, .resort, .hotel, .bnb, .card-overlay, .beach, .volcano {
-   border-color: whitesmoke;
+  border-color: #102f35;
   border-style: solid;
-  border-width: clamp(1rem, .08vw, 1.5rem);
+  border-width: clamp(0.5rem, .04vw, 0.75rem);
 }
-.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5, .restaurant6, .restaurant7 {
-   border-color: #2a7f78;
+.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5, .restaurant6, .restaurant7, #small-airport, #cruise-ship, #public-buses, #private-buses, #taxi, #large-airport {
+   border-color: #102f35;
   border-style: solid;
-  border-width: clamp(1rem, .08vw, 1.5rem); 
+  border-width: clamp(0.5rem, .04vw, 0.75rem); 
 }
 .rainforest {
-  border-top: clamp(1rem, .08vw, 1.5rem) solid whitesmoke;
-  border-bottom: clamp(1rem, .08vw, 1.5rem) solid whitesmoke;
+  border-top: clamp(0.5rem, .04vw, 0.75rem) solid whitesmoke;
+  border-bottom: clamp(0.5rem, .04vw, 0.75rem) solid whitesmoke;
   border-left: none;
   border-right: none;
 }
