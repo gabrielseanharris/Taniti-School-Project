@@ -44,6 +44,10 @@ main {
     align-self: flex-start;
     align-items: center;
 }
+.dining-main {
+    flex: 1 1 0;
+    min-width: 0;
+}
 h1{
     color: #000;
     text-align: center;
@@ -475,6 +479,7 @@ h1 img {
   background-image: url("media/restaurant6.jpeg");
 }
 .restaurant7 {
+  grid-column: 1 / -1;
   background-image: url("media/restaurant7.jpeg");
 }
 .dining-collage-top {
@@ -499,10 +504,11 @@ h1 img {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background-color: gray;
+  background-color: #e8f1ed;
+  color: #183b36;
   text-align: center;
   justify-content: center;
-  font-size: larger;
+  font-size: 1rem;
   padding: clamp(1.5rem, 3vw, 3rem);
 }
 .dining-collage-bottom {
@@ -609,4 +615,7 @@ h1 img {
 .bigger-font {
   font-size: larger;
   font-weight: bolder;
+}
+.restaurant7 {
+  
 }
