@@ -616,6 +616,14 @@ h1 img {
   font-size: larger;
   font-weight: bolder;
 }
-.restaurant7 {
-  
+footer {
+  display:flex;
+  flex-direction: column;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+footer small {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
 }
