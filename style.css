@@ -753,7 +753,7 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--leaf);
+  border: 1px solid #102f35;
   background: transparent;
   color: var(--leaf);
   align-items: center;
