@@ -13,11 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="home home-page">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
-            <h1><img class="left" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo">Come Visit Taniti!<img class="right" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo"></h1>
+            <h1><img class="left logo" src="media/palmtree-logo.png" alt="">Come Visit Taniti!<img class="right logo" src="media/palmtree-logo.png" alt=""></h1>
             <nav>
                 <ul class="nav-bar header-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="index.html" aria-current="page">Home</a></li>
                     <li class="inactive"><a href="Accommodations.html">Accommodations</a></li>
                     <li class="inactive"><a href="ThingsToDo.html">Things To Do</a></li>
                     <li class="inactive"><a href="Dining.html">Dining</a></li>
@@ -32,7 +33,7 @@
                 </form>
             </nav>
         </header>
-        <main class="main-aside home-main">
+        <main id="main-content" tabindex="-1" class="main-aside home-main">
             <div class="home-content">
                 <h2>Taniti: Where Adventure Awaits</h2>
                 <p>Welcome to Taniti, a tropical paradise with something for everyone!</p>

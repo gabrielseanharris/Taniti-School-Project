@@ -13,13 +13,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="home">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
-            <h1><img class="left" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo">Nature Fun<img class="right" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo"></h1>
+            <h1><img class="left logo" src="media/palmtree-logo.png" alt="">Nature Fun<img class="right logo" src="media/palmtree-logo.png" alt=""></h1>
             <nav>
                 <ul class="nav-bar header-nav">
                     <li class="inactive"><a href="index.html">Home</a></li>
                     <li class="inactive"><a href="Accommodations.html">Accommodations</a></li>
-                    <li class="active"><a href="ThingsToDo.html">Things To Do</a></li>
+                    <li class="active"><a href="ThingsToDo.html" aria-current="location">Things To Do</a></li>
                     <li class="inactive"><a href="Dining.html">Dining</a></li>
                     <li class="inactive"><a href="Transportation.html">Transportation</a></li>
                     <li class="inactive"><a href="FAQs.html">FAQs</a></li>
@@ -32,7 +33,7 @@
                 </form>
             </nav>
         </header>
-        <main>
+        <main id="main-content" tabindex="-1">
             <p class="intro">No one's outdoors are quite as "great" as Taniti's!</p>
             <div class="row">
                 <div class="beach">

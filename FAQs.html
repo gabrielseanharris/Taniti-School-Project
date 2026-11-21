@@ -13,8 +13,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="home">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
-            <h1><img class="left" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo">FAQs<img class="right" src="media/palmtree-logo.png" alt="Taniti Logo" class="logo"></h1>
+            <h1><img class="left logo" src="media/palmtree-logo.png" alt="">FAQs<img class="right logo" src="media/palmtree-logo.png" alt=""></h1>
             <nav>
                 <ul class="nav-bar header-nav">
                     <li class="inactive"><a href="index.html">Home</a></li>
@@ -22,7 +23,7 @@
                     <li class="inactive"><a href="ThingsToDo.html">Things To Do</a></li>
                     <li class="inactive"><a href="Dining.html">Dining</a></li>
                     <li class="inactive"><a href="Transportation.html">Transportation</a></li>
-                    <li class="active"><a href="FAQs.html">FAQs</a></li>
+                    <li class="active"><a href="FAQs.html" aria-current="page">FAQs</a></li>
                 </ul>
                 <form class="search-bar header-search" role="search">
                     <label class="visually-hidden" for="site-search">Search this site</label>
@@ -32,7 +33,7 @@
                 </form>
             </nav>
         </header>
-        <main class="main-aside">
+        <main id="main-content" tabindex="-1" class="main-aside">
             <div class="home-content faq-intro">
                 <h2>Frequently Asked Questions</h2>
                 <p><b>What kind of charger do I need?</b></p>
