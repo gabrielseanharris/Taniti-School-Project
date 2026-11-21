@@ -368,7 +368,7 @@ h1 img {
 }
 .card-overlay p {
   text-align: center;
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.8rem);
 }
 .city:hover, .nature:hover, .museum:hover {
   transform: scale(1.05);
