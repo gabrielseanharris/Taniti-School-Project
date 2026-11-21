@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(194, 233, 23, 0.6);
+    background-color: rgb(194, 233, 23);
     box-sizing: border-box;
     padding: clamp(1.5rem, 6vw, 5rem);
     border-radius: 5%;
@@ -24,7 +24,7 @@
 
 }
 main {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.45);
 }
 .main-aside {
     display: flex;
@@ -37,7 +37,7 @@ main {
     box-sizing: border-box;
     flex: 0 0 22%;
     min-width: 15rem;
-    background-color: rgba(0, 16, 247, 0.5);
+    background-color: rgb(0, 16, 247);
     padding: 20px;
     border-radius: 5%;
     margin: 1rem;
@@ -619,11 +619,148 @@ h1 img {
 footer {
   display:flex;
   flex-direction: column;
+  align-items: center;
 }
 .footer-links {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--leaf);
+  background: transparent;
+  color: var(--leaf);
+  align-items: center;
+  min-height: 2.8rem;
+  box-sizing: border-box;
+  padding: 0.65rem rem;
+  border-radius: 999px;
+  background: lightgreen;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: .35vw;
+  width: 50%;
+  max-width: none;
+}
+.footer-links a {
+  font-size: 2rem;
+}
+.footer-links {
+  transition: transform 0.3s ease;
+}
+.footer-links:hover {
+  transform: translateY(-8px);
 }
 footer small {
   font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+
+/* Home page refresh: keep these rules isolated from the other pages. */
+.home-page {
+  --ocean: #123f46;
+  --ocean-deep: #102f35;
+  --leaf: #356b4b;
+  --sand: #f4efe3;
+  --ink: #183336;
+  min-height: 100vh;
+  background-color: var(--sand);
+  background-image: linear-gradient(180deg, rgba(13, 48, 51, 0.18), rgba(13, 48, 51, 0.46)), url("media/island.jpg");
+  background-attachment: fixed;
+  color: var(--ink);
+}
+.home-page .home-main {
+  align-items: stretch;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: min(100% - 2rem, 76rem);
+  margin: clamp(1.5rem, 5vw, 4rem) auto;
+  padding: 0;
+  background: transparent;
+}
+.home-page .home-content,
+.home-page .home-aside {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2.5rem rgba(16, 47, 53, 0.18);
+}
+.home-page .home-content {
+  flex: 1 1 42rem;
+  align-items: flex-start;
+  width: auto;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  background: rgb(194, 233, 23);
+}
+.home-page .home-content h2 {
+  width: 100%;
+  margin: 0 0 1rem;
+  color: var(--ocean-deep);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+.home-page .home-content p {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 0 1rem;
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.7;
+}
+.home-page .home-content img {
+  width: 100%;
+  max-height: 25rem;
+  margin-top: 1rem;
+  border-radius: 0.9rem;
+  object-fit: cover;
+}
+.home-page .home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.home-page .home-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.8rem;
+  box-sizing: border-box;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  background: var(--leaf);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.home-page .home-actions a + a {
+  border: 1px solid var(--leaf);
+  background: transparent;
+  color: var(--leaf);
+}
+.home-page .home-actions a:hover,
+.home-page .home-actions a:focus-visible {
+  background: var(--ocean-deep);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0.35rem 0.8rem rgba(16, 47, 53, 0.25);
+}
+.home-page .home-aside {
+  flex: 0 1 19rem;
+  min-width: 0;
+  align-self: stretch;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  background: rgb(0, 16, 247);
+  color: #fff;
+}
+.home-page .home-aside h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+.home-page .home-aside ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
+@media (max-width: 700px) {
+  .home-page .home-main { width: min(100% - 1.25rem, 76rem); }
+  .home-page .home-content,
+  .home-page .home-aside { width: 100%; margin: 0; }
 }
